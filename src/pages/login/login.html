@@ -1,0 +1,101 @@
+<ion-header>
+</ion-header>
+
+<ion-content class="todo">
+
+    <br><br><br><br>
+
+    <ion-img style="width: 240px;
+                  height: 100px; 
+                  left: 17%;
+                  top: 80px;    
+                  position: absolute;
+                  margin-left: auto;
+                  margin:10px;
+                  display:block; 
+                  background: transparent;" src="assets/img/new/LOGO.svg">
+    </ion-img>
+
+
+    <br><br><br><br><br><br><br><br>
+
+    <ion-card>
+        <ion-card-content>
+
+            <div>
+                <ion-list>
+                    <ion-item>
+                        <ion-label class="colorGris">{{ 'Login.idioma' | translate }}</ion-label>
+                        <ion-select (ionChange)="choose($event)">
+                            <ion-option *ngFor="let item of idioms" [value]="item.value" class="colorGris">
+                                {{ item.label }}
+                            </ion-option>
+                        </ion-select>
+                    </ion-item>
+                </ion-list>
+
+                <div class="inicioSesion">
+                    {{ 'login.inicioSesion' | translate }}
+                </div>
+                <div class="data">
+                    {{ 'login.inicioSesion2' | translate }}
+                </div>
+
+                <br>
+
+                <table width="100%">
+                    <tr>
+                        <td>
+                            <ion-input [(ngModel)]="usuario" type="text" placeholder="{{ 'Login.user' | translate }}" class="colorGris"></ion-input>
+                        </td>
+                        <td style="text-align: center;">
+                            <ion-icon ios="md-person" md="md-person" style="font-size: 22px;"></ion-icon>
+                            <!-- <ion-img src="assets/img/new/INICIO_USUARIO.png" style="width: 10px; height: 10px;  margin:5px auto; background-color: transparent;"></ion-img> -->
+                        </td>
+                    </tr>
+                </table>
+
+                <table width="100%">
+                    <tr>
+                        <td>
+                            <ion-input [(ngModel)]="pass" type="password" placeholder="{{ 'Login.pass' | translate }}" class="colorGris"></ion-input>
+                        </td>
+                        <td style="text-align: center;">
+                            <ion-icon ios="md-lock" md="md-lock" style="font-size: 22px;"></ion-icon>
+                            <!-- <ion-img src="assets/img/new/INICIO_PASW.png" style="width: 10px; height: 10px;  margin:5px auto; background-color: transparent;"></ion-img> -->
+                        </td>
+                    </tr>
+                </table>
+
+
+                <div id="contenedorBtn" *ngIf="contenedorBtn">
+                    <button ion-button outline (click)="callKeysDevice('login')" id="btnLogin" [disabled]="!isBtnEnabled" style="box-shadow: 0px 0px 5px 1px white;">{{ 'Login.iniciar' | translate }}</button>
+                    <button ion-button outline (click)="afiliacion()" id="btnLogin" [disabled]="isBtnEnabledAfi" style="box-shadow: 0px 0px 5px 1px white;">{{ 'Afiliacion.registrate' | translate }}</button>
+                    <!--  <button ion-button outline (click)="drop()" id="btnLogin">ELIMINAR</button>    -->
+                </div>
+
+            </div>
+            <br>
+
+            <!-- <button ion-button outline (click)="drop()" id="btnLogin">ELIMINAR</button> -->
+
+            <!-- Se muestra si el finger en por huella -->
+            <div (click)="callKeysDevice('huella')" *ngIf="huella">
+                <p style="margin: auto" style="text-align: center; color: #323232;">{{ 'Login.finger' | translate }}</p>
+                <ion-img src="assets/img/new/INICIO_HUELLA.svg" style="width: 60px; height: 60px;  margin:10px auto; display:block; background-color: transparent;">
+                </ion-img>
+            </div>
+
+
+            <!-- Se muestra si el finger en por face -->
+            <div (click)="callKeysDevice('huella')" *ngIf="face_ID">
+                <p style="margin: auto" style="text-align: center; color: #323232;">{{ 'Login.face' | translate }}</p>
+                <ion-img src="assets/img/new/INICIO_ROSTRO.svg" style="width: 60px; height: 60px;  margin:10px auto; display:block; background-color: transparent;">
+                </ion-img>
+            </div>
+
+        </ion-card-content>
+
+    </ion-card>
+
+</ion-content>

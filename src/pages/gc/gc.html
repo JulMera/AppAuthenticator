@@ -1,0 +1,112 @@
+<ion-header>
+    <!--
+  <ion-navbar hideBackButton>
+    
+    <button ion-button menu-toggle (click)="menu()">
+      <ion-icon name="menu"></ion-icon>
+    </button> 
+    <div id="logo"></div>
+    <div id="logOut" (click)="presentConfirm()"></div>
+
+  </ion-navbar>
+-->
+</ion-header>
+
+
+<ion-content class="todo" (ionScroll)="reiniciarSesion()" (click)="reiniciarSesion()">
+
+    <!--
+  <ion-label class="ttlProductOverView">{{ 'gc.titulo' | translate }}</ion-label>
+  <br>
+  <table *ngFor="let Rgrid of grilla; let i=index" class="tablaGrilla" border="1">
+    <tbody>
+      <tr>
+        <td *ngFor="let Cgrid of Rgrid" [ngClass]="{'td_color2' : i == 0}">
+          {{ Cgrid }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <div id="contenedorBtn">
+    <button ion-button outline (click)="generateNewGc()" id="primerBoton" [disabled]="isBtnEnabled">{{ 'tk.new' | translate }}</button>
+  </div>
+-->
+
+    <ion-img style="width: 240px;
+                  height: 60px; 
+                  left: 15%;
+                  top: 40px;    
+                  position: absolute;
+                  margin-left: auto;
+                  margin:10px;
+                  display:block; 
+                  background: #F0F2F4;" src="assets/img/new/LOGO.svg">
+    </ion-img>
+
+    <br><br><br><br><br><br><br><br><br>
+
+    <ion-card>
+        <ion-card-content>
+
+            <ion-scroll scrollX style="height:400px;">
+
+                <table>
+                    <tr>
+                        <td>
+                            <span class="devolver" (click)="devolverse()">
+                <ion-img src="assets/img/new/BANDEJA_DEVOLVERSE.svg"></ion-img>
+              </span>
+                            <span class="otp">
+            <!--<ion-img src="assets/img/new/BANDEJA_TC.svg"></ion-img>-->  
+                <div id="gridCardTC"></div>
+              </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="texto">
+                                {{ 'gc.titulo' | translate }}
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <!-- Empieza -->
+
+                            <table *ngFor="let Rgrid of grilla; let i=index" class="tablaGrilla">
+                                <tbody>
+                                    <tr class="gc">
+                                        <td *ngFor="let Cgrid of Rgrid" [ngClass]="{'td_color2' : i == 0}">
+                                            <!--<ion-card>
+                        <ion-card-content>-->
+                                            <div class="gc">
+                                                {{ Cgrid }}
+                                            </div>
+                                            <!--</ion-card-content>
+                      </ion-card>-->
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <!-- Termina -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="contenedorBtn">
+                                <button ion-button outline (click)="generateNewGc()" id="primerBoton" [disabled]="isBtnEnabled" style="box-shadow: 0px 0px 5px 1px white;">{{ 'tk.new' | translate }}</button>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+            </ion-scroll>
+
+        </ion-card-content>
+    </ion-card>
+
+
+
+</ion-content>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "663636742494",
+    "firebase_url": "https://auth-push.firebaseio.com",
+    "project_id": "auth-push",
+    "storage_bucket": "auth-push.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:663636742494:android:aa78379f742c514ab87fcf",
+        "android_client_info": {
+          "package_name": "com.e2e.auth.auth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "663636742494-9n4tpg1m83dpp74osrbaek6khpekqlj5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcqNFFY6QZ8YJuDlZstUFbBhyUuJDOFjs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "663636742494-9n4tpg1m83dpp74osrbaek6khpekqlj5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

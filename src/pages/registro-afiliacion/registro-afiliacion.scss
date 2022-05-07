@@ -1,0 +1,105 @@
+page-registro-afiliacion {
+
+    #logoPyt        { margin-top: 5px; }
+
+    //Scroll lateral derecho para ocultar
+    //.scroll-content { overflow-y: hidden; }
+
+    //Scroll lateral derecho para ocultar
+    //.scroll-content { overflow-y: hidden; }
+    
+    //Estilo de la raya de abajo de los input
+    .confondo { margin-bottom: -1px; }
+    .input-cover { margin-left: 10px; }
+
+     //Item del usuario
+    .item { background-color:  transparent;  border-bottom-width: 1px; border-bottom-color: #387ef5; }
+
+    .list{ background-color:  transparent;  border-bottom-width: 1px; border-bottom-color: #387ef5; }
+
+    /*.select {background-color: transparent; background-color: #c3c3c3; }*/
+
+    .list-ios .item-block:first-child { border-top: 0px; }
+
+    #btnLogin{ margin-left: 28%; width: 45%; border-radius: 4px;}
+
+    #logoLogin { margin-left: 3%; }
+
+    //Evita el paddind en de los input (usuario - contraseña)
+    .no-padding {
+        padding: 0px !important;
+    }
+
+    //linea azul del usuario
+    .item-md.item-block .item-inner {
+        padding-right: 2px;
+        border-bottom: 1px solid #387ef5;
+    }
+
+    //linea azul de la contraseña
+    .list-md .item-input:last-child {
+        border-bottom: 1px solid #387ef5;
+    }
+
+    .tabLogin{
+        background: #5f5f5f;
+        height: 50px;
+        width: 100%;
+        margin-top: 18%;
+    }
+
+    .termi_Condi{
+        outline: none;
+        //background: white;
+        background-color: transparent;
+    }
+
+    
+
+
+
+    //********************************************
+
+    // Modificaciones nuevas sugeridas por sebastian 27 de abril 2020
+    
+    // Borde de la tablas
+    .tabla1 {
+        border-bottom: 1px solid #323232;
+    }
+
+    // color dentro del boton
+    .button-outline-md {
+
+        border-color: #FFF;
+        color: #FFF;
+    
+    }
+
+    // estilo del ion-card
+    .card-md {
+        border-radius: 25px;   
+        padding: 3px;  
+        width: calc(97% - 20px);
+        margin-left: auto;
+    }
+
+    // Relleno contenido del ion-card
+    .card-content-md {
+        background: #F0F2F4;
+    }
+
+    // color subrayado terminos y condiciones
+    .subrayado{ color: #FF3C00; }
+
+    // color campo Registro
+   .inicioSesion{
+        color: black;
+        font-family: Helvetica;
+        font-weight: bold;
+        font-size: 30px;
+        margin-left: 2%;
+    }
+
+    
+
+}

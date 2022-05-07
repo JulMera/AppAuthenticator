@@ -1,0 +1,9 @@
+{
+  "name": "E2E-Authenticator",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "id": "663636742494",
+  "app_id": ""
+}

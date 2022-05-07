@@ -1,0 +1,182 @@
+<ion-header>
+    <!--
+  <ion-navbar hideBackButton>
+    <button ion-button menu-toggle (click)="menu()">
+      <ion-icon name="menu"></ion-icon>
+    </button> 
+    <div id="logo"></div>
+    <div id="logOut" (click)="presentConfirm()"></div>
+  </ion-navbar>
+-->
+</ion-header>
+
+
+<ion-content class="todo" (ionScroll)="reiniciarSesion()" (click)="reiniciarSesion()">
+
+    <ion-img style="width: 240px;
+                height: 60px; 
+                left: 15%;
+                top: 40px;    
+                position: absolute;
+                margin-left: auto;
+                margin:10px;
+                display:block; 
+                background: #F0F2F4;" src="assets/img/new/LOGO.svg">
+    </ion-img>
+
+    <br><br><br><br><br><br><br><br>
+
+    <div *ngIf="fingerFace">
+        <div (click)="loginFingerPrint()" *ngIf="huella">
+            <p style="margin: auto" style="text-align: center">Confirme con su huella digital</p><br>
+            <ion-img src="assets/img/logo.png" style="width: 100px; height: 100px;  margin:10px auto; display:block;"></ion-img>
+        </div>
+
+        <div (click)="loginFingerPrint()" *ngIf="face_ID">
+            <p style="margin: auto" style="text-align: center">Inicie sesión con su reconocimiento facial</p><br>
+            <ion-img src="assets/img/faceId.jpg" style="width: 100px; height: 105px;  margin:10px auto; display:block;">
+            </ion-img>
+        </div>
+    </div>
+
+    <!--
+  <font size=5 style="color: #232f3e; margin-left: 19%;">{{ 'pushMensajeTitulo' | translate }}</font><br><br>
+           
+  <div *ngIf="contentMsj">
+  
+    <ion-item>
+      <ion-label>
+        <ion-icon name="ios-warning-outline" style="margin-right: 3%;"></ion-icon> {{titulo}}
+      </ion-label>
+    </ion-item>
+  
+        <table width="100%">
+          <tr>
+            <td style="padding-left: 5%;"><ion-icon name="ios-mail-outline" style="margin-right: 5%;"></ion-icon></td>
+            <td style="border-bottom: solid 1px; padding-left: 10%; border-color: #dedede; padding-top: 3%; padding-bottom: 3%;">{{mensaje}}</td>
+          </tr>
+        </table>
+  
+    <ion-item>
+      <ion-label>
+        <ion-icon name="md-calendar" style="margin-right: 5%;"></ion-icon>{{fecha}}
+      </ion-label>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>
+        <ion-icon name="ios-time-outline" style="margin-right: 3%;"></ion-icon> {{hora}}
+      </ion-label>
+    </ion-item>
+  
+    <ion-item>
+      <div *ngIf="aprobo">
+        <font size=4 style="color: green; margin-left: 6%;">
+          <ion-icon name="checkmark" style="color: green;"></ion-icon> Transaccion Aprobada
+        </font>
+      </div>
+      
+      <div *ngIf="rechazo">
+        <font size=4 style="color: red; margin-left: 5%;">
+          <ion-icon name="close" style="color: red;"></ion-icon> Transaccion Rechazada
+        </font>
+      </div>
+    </ion-item>
+  </div>
+  -->
+
+    <!--Aqui empieza lo nuevo-->
+
+    <!--*ngIf="contentMsj"-->
+    <div>
+        <ion-card>
+            <ion-card-content>
+                <!--empieza-->
+                <table>
+                    <tr *ngIf="mostrarDevolver">
+                        <td *ngIf="mostrarDevolver">
+                            <span class="devolver" (click)="devolverse()">
+                            <ion-img src="assets/img/new/BANDEJA_DEVOLVERSE.svg" style="width: 31px; height: 26px; background-color: transparent;"></ion-img>
+                        </span>
+                            <span class="otp">
+                            <!--<ion-img src="assets/img/new/BANDEJA_VERIFICACION_ID.svg"></ion-img>-->
+                        </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="texto">
+                                {{ 'validacionPos.titulo' | translate }}
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <!--termina-->
+                <div href="#">
+                    <p style="font-size: initial; margin-top: 20px; color: #A0A0A0;">{{ 'pushMensajeTitulo2' | translate }}</p>
+                </div>
+                <br>
+                <table style="margin-top: -15px;">
+
+                    <tr style="border-bottom: 1px solid; border-bottom-color: #A0A0A0;">
+                        <td>
+                            <ion-icon name="ios-warning-outline" style="margin-right: 3%; color: #FF3C00; "></ion-icon>
+                        </td>
+                        <td style="color: #A0A0A0; padding-left: 10px;">
+                            {{titulo}}
+                        </td>
+                    </tr>
+
+                    <tr style="border-bottom: 1px solid; border-bottom-color: #A0A0A0;">
+                        <td>
+                            <ion-icon name="ios-mail-outline" style="margin-right: 5%; color: #FF3C00;"></ion-icon>
+                        </td>
+                        <td style="color: #A0A0A0; padding-left: 10px;">
+                            {{mensaje}}
+                        </td>
+                    </tr>
+
+                    <tr style="border-bottom: 1px solid; border-bottom-color: #A0A0A0;">
+                        <td>
+                            <ion-icon name="md-calendar" style="margin-right: 5%; color: #FF3C00;"></ion-icon>
+                        </td>
+                        <td style="color: #A0A0A0; padding-left: 10px;">
+                            {{fecha}}
+                        </td>
+                    </tr>
+
+                    <tr style="border-bottom: 1px solid; border-bottom-color: #A0A0A0;">
+                        <td>
+                            <ion-icon name="ios-time-outline" style="margin-right: 3%; color: #FF3C00;"></ion-icon>
+                        </td>
+                        <td style="color: #A0A0A0; padding-left: 10px;">
+                            {{hora}}
+                        </td>
+                    </tr>
+
+                    <tr *ngIf="aprobo">
+                        <td>
+                            <ion-icon name="checkmark" style="color: #D2D20A;"></ion-icon>
+                        </td>
+                        <td style="color: #D2D20A; padding-left: 10px;">
+                            Transaccion Aprobada
+                        </td>
+                    </tr>
+                    <tr *ngIf="rechazo">
+                        <td>
+                            <ion-icon name="close" style="color: #FF3C00;"></ion-icon>
+                        </td>
+                        <td style="color: #FF3C00;padding-left: 10px;">
+                            Transaccion Rechazada
+                        </td>
+                    </tr>
+                </table>
+
+            </ion-card-content>
+        </ion-card>
+    </div>
+
+
+
+
+</ion-content>

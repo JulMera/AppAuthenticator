@@ -1,0 +1,118 @@
+page-gc {
+
+    /*    
+    .tablaGrilla td {width: 40px; padding: 2px; text-align: center;}
+    .tablaGrilla td:nth-child(1) {background:  rgb(255, 196, 0); color: black; font-weight: bold; border: solid 1px;}
+    .td_color2  {background:  rgb(255, 196, 0); color: black; font-weight: bold; text-transform: uppercase; border: solid 1px;}
+   
+    //Barra de menu - color blanco
+    .ion-md-menu:before {
+        content: "\f32a";
+        color: white;
+    }
+
+    //Scroll lateral derecho para ocultar
+    .scroll-content { overflow-y: hidden; }
+*/
+
+.tablaGrilla td {width: 39px; padding: -1px; text-align: center; font-size: 10px;}
+    .tablaGrilla td:nth-child(1) {background:  #F0F2F4; color: #FF3C00;; font-weight: bold;  /*border: solid 1px;*/}
+    .td_color2  {background:  #F0F2F4; color: #FF3C00;; font-weight: bold; text-transform: uppercase; /*border: solid 1px;*/}
+   
+    //Barra de menu - color blanco   
+    .ion-md-menu:before {
+        content: "\f32a";
+        color: white;
+    }
+
+    //Scroll lateral derecho para ocultar
+    //.scroll-content { overflow-y: hidden; }
+
+    //******************************************
+
+    // Las nuevas modificaciones que sugerio esteban 27 de abril 2020
+
+    // Tamaño de los iconos
+    ion-img {
+
+        width: 35px;
+        height: 35px;
+        background: transparent;
+
+    }
+
+    // estilo icono otp
+    .otp{
+        float: right;
+        margin-right: 5px;
+    }
+
+    // estilo icono regresar
+    .devolver{
+        margin-left: 5px;
+    }
+
+    table{
+        width: 100%;
+    }
+
+    // estilo texto tarjeta de coordenadas
+    .texto {
+
+        font-size: 20px;
+        text-align: center;
+        color: #323232;
+        font-family: Helvetica;
+        font-weight: bold;
+    
+    }
+
+    // estilo icono regresar
+    .devolver{
+        margin-left: 5px;
+    }
+
+    // color y estilo botones
+    .button-outline {
+
+        border-color: #FFF;
+        color: #FFF;
+    
+    }
+
+    // estilo del ion-card
+    .card {
+        border-radius: 25px;   
+        padding: 3px;  
+        width: calc(97% - 20px);
+        margin-left: auto;
+    }
+
+    // estilo del ion-card
+    .card-content {
+        background: #F0F2F4;
+    }
+
+    //estilo de los campos de la tarjeta de coordenadas
+    .gc{
+        background: #F0F2F4;
+        border-radius: 29px;
+        padding: 5px;
+        margin: 2px;
+        box-shadow: 0px 0px 5px 1px white;
+    }
+
+
+    ion-scroll[scrollX] {
+
+        white-space: nowrap;
+        
+        .scroll-item {
+        
+        display: inline-block;
+        
+        }
+    }
+    
+
+}

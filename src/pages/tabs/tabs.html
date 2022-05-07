@@ -1,0 +1,11 @@
+<ion-tabs [selectedIndex]="index" cache-view="false" color="tabs">
+  <ion-tab [root]="tab1Root" tabTitle="{{ 'Tabs.inbox' | translate }}" tabIcon="ios-archive" (ionSelect)="changeTabinbox()" ></ion-tab>
+  <ion-tab [root]="tab2Root" tabTitle="{{ 'Tabs.otp' | translate }}" tabIcon="ios-key" (ionSelect)="changeTabTransfer()"></ion-tab>
+  <ion-tab [root]="tab3Root" tabTitle="{{ 'Tabs.tarjeta' | translate }}" tabIcon="ios-keypad" (ionSelect)="changePaysTab()"></ion-tab>
+  <ion-tab [root]="tab4Root" tabTitle="{{ 'Tabs.qr' | translate }}" tabIcon="ios-qr-scanner-outline" (ionSelect)="changeTab()"></ion-tab>
+  <ion-tab [root]="tab5Root" tabTitle="{{ 'Tabs.tk' | translate }}" tabIcon="ios-repeat"></ion-tab> 
+  <ion-tab [root]="tab6Root" tabTitle="TK-QR" tabIcon="ios-repeat"></ion-tab>
+  <ion-tab [root]="tab7Root" tabTitle="U.S" tabIcon="ios-lock"></ion-tab>
+  <ion-tab [root]="tab8Root" tabTitle="{{ 'validacionPos.titulo' | translate }}" tabIcon="ios-checkbox-outline"></ion-tab>    
+  <ion-tab [root]="tab9Root" tabTitle="Desafiliar" tabIcon="ios-mail-outline"></ion-tab>
+</ion-tabs>

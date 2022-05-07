@@ -1,0 +1,95 @@
+page-qr {
+    
+    [icon-left] ion-icon, [icon-start] ion-icon { color: #ffffff; }
+
+    .button-inner { font-size: 12px; }
+
+    ion-app.md [padding] {
+        padding: 2px;
+    }
+
+    //Scroll lateral derecho para ocultar
+    //.scroll-content { overflow-y: hidden; }
+
+    .confirmExitosa{
+        background: url(../assets/img/new/MENSAJE_VALIDO.svg) 0 0 no-repeat;
+        height: 40px;
+        width: 40px ;
+        margin: auto; 
+    }
+
+    .confirmFallida{
+        background: url(../assets/img/new/MENSAJE_INVALIDO.svg) 0 0 no-repeat;
+        height: 40px;
+        width: 40px ;
+        margin: auto; 
+    }
+
+    .respServer{
+        text-align: center; 
+    }
+
+    //******************************************
+
+    // Las nuevas modificaciones que sugerio esteban 27 de abril 2020
+
+    // Tamaño de los iconos
+    ion-img {
+
+        width: 35px;
+        height: 35px;
+        background: #F0F2F4;
+
+    }
+
+    // estilo icono otp
+    .otp{
+        float: right;
+        margin-right: 5px;
+    }
+
+    // estilo icono regresar
+    .devolver{
+        margin-left: 5px;
+    }
+
+    table{
+        width: 100%;
+    }
+
+    // estilo texto tarjeta de coordenadas
+    .texto {
+
+        font-size: 20px;
+        text-align: left;
+        color: #323232;
+        font-family: Helvetica;
+        font-weight: bold;    
+    }
+
+    // estilo icono regresar
+    .devolver{
+        margin-left: 5px;
+    }
+
+    // color y estilo botones
+    .button-outline {
+
+        border-color: #FFF;
+        color: #FFF;
+    
+    }
+
+    // estilo del ion-card
+    .card {
+        border-radius: 25px;   
+        padding: 3px;  
+        width: calc(97% - 20px);
+        margin-left: auto;
+    }
+
+    // estilo del ion-card
+    .card-content {
+        background: #F0F2F4;
+    }
+}

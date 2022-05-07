@@ -1,0 +1,108 @@
+<ion-header>
+</ion-header>
+
+<ion-content class="todo" (ionScroll)="reiniciarSesion()" (click)="reiniciarSesion()">
+
+    <br><br><br><br>
+
+    <ion-img style="width: 240px;
+                  height: 80px; 
+                  left: 15%;
+                  top: 80px;    
+                  position: absolute;
+                  margin-left: auto;
+                  margin:10px;
+                  display:block; 
+                  background: #F0F2F4;" src="assets/img/new/LOGO.svg">
+    </ion-img>
+
+    <br><br><br><br><br><br><br>
+
+    <!--<div id="loginForm">
+
+    <ion-list class="item no-padding">
+      <ion-item>
+        <ion-label>
+          <ion-icon name="person"></ion-icon>
+        </ion-label>
+        <ion-input [(ngModel)]="usuario" type="text" placeholder="{{ 'Login.user' | translate }}" class="confondo"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label>
+          <ion-icon name="lock"></ion-icon>
+        </ion-label>
+        <ion-input [(ngModel)]="pass" type="password" placeholder="{{ 'Login.pass' | translate }}"  class="confondo"> </ion-input>
+      </ion-item>
+    </ion-list>
+
+    <table style="width:80%">
+      <tr>
+        <td><button class="termi_Condi" (click)="condiciones()"><u class="subrayado">{{'registroAfiliacion.condicion' | translate}}</u></button></td>
+        <td><ion-toggle [(ngModel)]="value" color="primary" (ionChange)="notify(value)" style="width: 60px;"></ion-toggle></td> 
+      </tr>
+      <tr>
+        
+      </tr>
+    </table>
+    <br>
+    <div>
+      <button ion-button outline (click)="afiliacion()" id="btnLogin" [disabled]="isBtnEnabledAfi" style="box-shadow: 0px 0px 5px 1px white;">{{'registroAfiliacion.btn' | translate}}</button>
+    </div>
+  </div>-->
+
+
+    <!-- ************************ -->
+    <ion-card>
+        <ion-card-content>
+
+            <div class="inicioSesion">
+                {{ 'registroAfiliacion.registro' | translate }}
+            </div>
+
+            <table width="100%" class="tabla1">
+                <tr>
+                    <td>
+                        <ion-input [(ngModel)]="usuario" type="text" placeholder="{{ 'Login.user' | translate }}" class="colorGris"></ion-input>
+                    </td>
+                    <td>
+                        <ion-img src="assets/img/new/INICIO_USUARIO.png" style="width: 10px; height: 10px;  margin:5px auto; display:block;"></ion-img>
+                    </td>
+                </tr>
+            </table>
+
+            <table width="100%" class="tabla1">
+                <tr>
+                    <td>
+                        <ion-input [(ngModel)]="pass" type="password" placeholder="{{ 'Login.pass' | translate }}" class="colorGris"> </ion-input>
+                    </td>
+                    <td>
+                        <ion-img src="assets/img/new/INICIO_PASW.png" style="width: 10px; height: 10px;  margin:5px auto; display:block;"></ion-img>
+                    </td>
+                </tr>
+            </table>
+
+            <br>
+
+            <table style="width:100%">
+                <tr>
+                    <td><button class="termi_Condi" (click)="condiciones()"><u class="subrayado">{{'registroAfiliacion.condicion' | translate}}</u></button></td>
+                    <!--*ngIf="idioma"-->
+                    <td>
+                        <!--<ion-toggle [(ngModel)]="value" color="primary" (ionChange)="notify(value)" style="width: 60px;"></ion-toggle>-->
+                        <ion-img src="assets/img/new/IDIOMA_SELECCIONADO.png" style="width: 10px; height: 10px;"></ion-img>
+                    </td>
+                </tr>
+                <tr>
+
+                </tr>
+            </table>
+            <br>
+            <div>
+                <button ion-button outline (click)="afiliacion()" id="btnLogin" [disabled]="isBtnEnabledAfi" style="box-shadow: 0px 0px 5px 1px white;">{{'registroAfiliacion.btn' | translate}}</button>
+            </div>
+
+        </ion-card-content>
+    </ion-card>
+
+</ion-content>

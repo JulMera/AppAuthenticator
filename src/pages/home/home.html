@@ -1,0 +1,232 @@
+<ion-header>
+    <!--
+  <ion-navbar hideBackButton>
+    
+    <button ion-button menu-toggle (click)="menu()">
+      <ion-icon name="menu"></ion-icon>
+    </button>  
+    <div id="logo"></div>
+    <div id="logOut" (click)="presentConfirm()"></div>
+  </ion-navbar>-->
+
+</ion-header>
+
+<ion-content class="todo" (ionScroll)="reiniciarSesion()" (click)="reiniciarSesion()">
+
+    <!--
+  <ion-label class="ttlProductOverView">{{ 'Afiliacion.btn' | translate }}</ion-label>
+  <br>
+  
+  <div>
+    <ion-label class="ttlProductOverView2">{{ tituloDinamico }}</ion-label>
+  </div>
+  <br>
+  <div class="ttlProductOverView3">
+    <input type="TEXT" id="otp" [(ngModel)]="CA_OTP" size="9" maxlength="10" style="width: 45%;" placeholder="{{authData}}" disabled="{{isDisabled}}">
+  </div>
+
+  <div id="contenedorBtn" *ngIf="mostarBtn">
+    <button ion-button outline (click)="authOtp()" id="primerBoton" [disabled]="!isBtnEnabled">{{ 'confirm.btn' | translate }}</button>
+  </div>
+  <br>
+
+  <div *ngIf="imgResStatus" class="confirmExitosa" > 
+  </div>
+  <div *ngIf="errorAdicional" class="confirmFallida">
+  </div>
+  <p class="respServer">{{resp}}</p>
+  -->
+
+    <ion-img style="width: 240px;
+                  height: 60px; 
+                  left: 15%;
+                  top: 40px;    
+                  position: absolute;
+                  margin-left: auto;
+                  margin:10px;
+                  display:block; 
+                  background: #F0F2F4;" src="assets/img/new/LOGO.svg">
+    </ion-img>
+
+    <br><br><br><br><br><br><br><br><br>
+
+    <ion-card>
+        <ion-card-content>
+
+            <table>
+                <tr>
+                    <td>
+                        <span class="devolver" (click)="devolverse()">
+                            <ion-img src="assets/img/new/BANDEJA_DEVOLVERSE.svg"></ion-img>
+                        </span>
+                        <span class="otp">
+                            <ion-img src="assets/img/new/BANDEJA_OTP.svg"></ion-img>
+                        </span>
+                    </td>
+                </tr>
+                <br><br>
+                <tr>
+                    <td>
+                        <div class="texto">
+                            {{ 'Afiliacion.btn' | translate }}
+                        </div>
+                    </td>
+                </tr>
+                <br><br>
+                <tr>
+                    <td>
+                        <div class="ttlProductOverView3">
+                            <span style="color: #A0A0A0; float: left;" *ngIf="mostrarClave">{{ 'home.msj' | translate }}</span>
+                            <table WIDTH="100%">
+                                <tr>
+                                    <td style="width: 100%;">
+                                        <!--disabled="{{isDisabled}}"-->
+                                        <input type="TEXT" id="otp" [(ngModel)]="CA_OTP" size="9" maxlength="10"
+                                            class="inputOTP" placeholder="{{authData}}" disabled="{{isDisabled}}">
+                                    </td>
+                                    <td>
+                                        <button (click)="delete()" *ngIf="mostrarClave">
+                                            <ion-icon name="backspace" style="color: #FF3C00;"></ion-icon>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!--*ngIf="mostarBtn"-->
+                        <div id="contenedorBtn" *ngIf="mostarBtn">
+                            <button ion-button outline (click)="authOtp()" id="primerBoton" [disabled]="!isBtnEnabled"
+                                style="box-shadow: 0px 0px 5px 1px white;">{{ 'confirm.btn' | translate }}</button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <br>
+
+            <div *ngIf="imgResStatus" class="confirmExitosa">
+            </div>
+            <div *ngIf="errorAdicional" class="confirmFallida">
+            </div>
+            <p class="respServer">{{resp}}</p>
+
+        </ion-card-content>
+    </ion-card>
+
+    <div *ngIf="mostrarClave">
+        <table WIDTH="100%">
+
+            <!-- numeros del 123 -->
+            <tr>
+                <td (click)="teclado('1')">
+                    <ion-card>
+                        <ion-card-content>
+                            <span>
+                                <p class="p">1</p>
+                            </span>
+                        </ion-card-content>
+                    </ion-card>
+                </td>
+                <td (click)="teclado('2')">
+                    <ion-card>
+                        <ion-card-content>
+                            <span>
+                                <p class="p">2</p>
+                            </span>
+                        </ion-card-content>
+                    </ion-card>
+                </td>
+                <td (click)="teclado('3')">
+                    <ion-card>
+                        <ion-card-content>
+                            <span>
+                                <p class="p">3</p>
+                            </span>
+                        </ion-card-content>
+                    </ion-card>
+                </td>
+            </tr>
+
+            <!-- numeros del 456 -->
+            <tr>
+                <td (click)="teclado('4')">
+                    <ion-card>
+                        <ion-card-content>
+                            <span>
+                                <p class="p">4</p>
+                            </span>
+                        </ion-card-content>
+                    </ion-card>
+                </td>
+                <td (click)="teclado('5')">
+                    <ion-card>
+                        <ion-card-content>
+                            <span>
+                                <p class="p">5</p>
+                            </span>
+                        </ion-card-content>
+                    </ion-card>
+                </td>
+                <td (click)="teclado('6')">
+                    <ion-card>
+                        <ion-card-content>
+                            <span>
+                                <p class="p">6</p>
+                            </span>
+                        </ion-card-content>
+                    </ion-card>
+                </td>
+            </tr>
+
+            <!-- numeros del 789 -->
+            <tr>
+                <td (click)="teclado('7')">
+                    <ion-card>
+                        <ion-card-content>
+                            <span>
+                                <p class="p">7</p>
+                            </span>
+                        </ion-card-content>
+                    </ion-card>
+                </td>
+                <td (click)="teclado('8')">
+                    <ion-card>
+                        <ion-card-content>
+                            <span>
+                                <p class="p">8</p>
+                            </span>
+                        </ion-card-content>
+                    </ion-card>
+                </td>
+                <td (click)="teclado('9')">
+                    <ion-card>
+                        <ion-card-content>
+                            <span>
+                                <p class="p">9</p>
+                            </span>
+                        </ion-card-content>
+                    </ion-card>
+                </td>
+            </tr>
+
+            <!-- numeros del 0 -->
+            <tr>
+                <td></td>
+                <td (click)="teclado('0')">
+                    <ion-card>
+                        <ion-card-content>
+                            <span>
+                                <p class="p">0</p>
+                            </span>
+                        </ion-card-content>
+                    </ion-card>
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+
+</ion-content>

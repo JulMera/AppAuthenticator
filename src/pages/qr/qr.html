@@ -1,0 +1,107 @@
+<ion-header>
+
+    <!--
+    <ion-navbar hideBackButton>
+        <button ion-button menu-toggle (click)="menu()">
+          <ion-icon name="menu"></ion-icon>
+      </button> 
+        <div id="logo"></div>
+        <div id="logOut" (click)="presentConfirm()"></div> 
+      </ion-navbar>
+  -->
+</ion-header>
+
+<ion-content class="todo" (ionScroll)="reiniciarSesion()" (click)="reiniciarSesion()">
+
+    <!--
+    <ion-label class="ttlProductOverView">{{ 'qrTitulo' | translate }}</ion-label>
+    <br>
+        
+    <div class="divTable">
+      <button ion-button full icon-left (click)="scanCode()" color="secondary" [disabled]="btnScanerQR">
+        <ion-icon name="qr-scanner"></ion-icon>{{ 'qrScanCode' | translate }}
+      </button>
+    </div>
+  -->
+    <!--*ngIf="mostrarCreatedCode"
+    <ion-card>
+      <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>
+    </ion-card>
+    
+    <br>
+    <div *ngIf="imgResStatus" class="confirmExitosa"></div>
+    <div *ngIf="errorAdicional" class="confirmFallida"></div>
+    <br>
+    <p *ngIf="imgResStatus" class="respServer">{{ 'qrRespuesta' | translate }}:{{ resp }}</p>-->
+
+    <ion-img style="width: 240px;
+                    height: 60px; 
+                    left: 15%;
+                    top: 40px;    
+                    position: absolute;
+                    margin-left: auto;
+                    margin:10px;
+                    display:block; 
+                    background: #F0F2F4;" src="assets/img/new/LOGO.svg">
+    </ion-img>
+
+    <br><br><br><br><br><br><br><br>
+
+    <ion-card>
+        <ion-card-content>
+
+            <table>
+                <tr>
+                    <td>
+                        <span class="devolver" (click)="devolverse()">
+            <ion-img src="assets/img/new/BANDEJA_DEVOLVERSE.svg"></ion-img>
+          </span>
+                        <span class="otp">
+            <ion-img src="assets/img/new/BANDEJA_QR.svg"></ion-img>
+          </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="texto">
+                            {{ 'qrTitulo' | translate }}
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- Empieza -->
+
+                        <!--*ngIf="mostrarCreatedCode"-->
+                        <div *ngIf="mostrarCreatedCode" style="padding-top: 15px;">
+                            <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>
+                        </div>
+
+                        <!-- Termina -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <br>
+                        <div>
+                            <!--[disabled]="btnScanerQR"-->
+                            <button ion-button full icon-left (click)="scanCode()" style="background: #F0F2F4; box-shadow: 0px 0px 5px 1px white;" [disabled]="btnScanerQR">
+              <ion-icon name="qr-scanner"></ion-icon>{{ 'qrScanCode' | translate }}
+            </button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+            <br>
+
+            <div *ngIf="imgResStatus" class="confirmExitosa"></div>
+            <div *ngIf="errorAdicional" class="confirmFallida"></div>
+            <br>
+            <p *ngIf="imgResStatus" class="respServer">{{ 'qrRespuesta' | translate }}:{{ resp }}</p>
+
+        </ion-card-content>
+    </ion-card>
+
+
+</ion-content>

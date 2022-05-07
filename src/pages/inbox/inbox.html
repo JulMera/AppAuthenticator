@@ -1,0 +1,247 @@
+<ion-header>
+
+    <!--<ion-navbar hideBackButton>
+    <button ion-button menu-toggle (click)="menu()">
+        <ion-icon name="menu"></ion-icon>
+    </button>     
+    <div id="logo"></div>
+    <div id="logOut" (click)="presentConfirm()"></div>
+  </ion-navbar>-->
+
+</ion-header>
+
+<ion-content class="todo" (ionScroll)="reiniciarSesion()" (click)="reiniciarSesion()">
+
+    <!--<ion-label class="ttlProductOverView">{{ 'Afiliacion.btn2' | translate }}</ion-label>
+  <br>
+  <table>
+    <tr>
+      <th>{{ 'Afiliacion.request' | translate }}</th>
+      <th><button style="background: white;" (click)="refreshInbox()"><ion-icon ios="ios-refresh" md="md-refresh"></ion-icon></button></th>
+    </tr>
+    <tr>
+      <td>{{ authType }}</td>
+      <td><button ion-button outline (click)="home()">{{ 'Afiliacion.btnView' | translate }}</button></td>
+    </tr>
+  </table>-->
+
+    <ion-img style="width: 240px;
+                  height: 63px; 
+                  left: 15%;
+                  top: 40px;    
+                  position: absolute;
+                  margin-left: auto;
+                  margin:10px;
+                  display:block; 
+                  background: #F0F2F4;" src="assets/img/new/LOGO.svg">
+    </ion-img>
+
+    <br><br><br><br><br><br><br><br>
+
+    <ion-card>
+        <ion-card-content>
+
+            <table>
+                <tr style="height: 60px;">
+                    <td>
+                        <span class="devolver" (click)="devolverse()">
+                            <ion-img src="assets/img/new/BANDEJA_DEVOLVERSE.svg"
+                                style="min-width: 31px; min-height: 26px;"></ion-img>
+                        </span>
+                        <span class="otp" (click)="refreshInbox()">
+                            <ion-img src="assets/img/new/BANDEJA_REFRESCAR.svg" style="min-height: 36px;"></ion-img>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="bandeja">
+                            {{ 'Tabs.inbox' | translate }}
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="data">
+                            {{ 'inbox.tareas' | translate }}
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+            <!--Inicio OTP-->
+            <ion-card style="width: 103%; border-radius: 7px;">
+                <ion-card-content style="padding: 0px 13px; font-size: 1.5rem; line-height: 1.5;">
+                    <table style="width: 100%;">
+                        <tr>
+                            <td>
+                                <span>
+                                    <ion-img src="assets/img/new/BANDEJA_OTP.svg" style="margin-top: 5px;"></ion-img>
+                                    <span style="font-size: 18px; margin-left: 5px;">
+                                        <!--{{ authType }}-->
+                                        OTP
+                                    </span>
+                                </span>
+                            </td>
+                            <td style="text-align: -webkit-right;">
+                                <div style="width: 8px; height: 8px; background: url(../assets/img/new/BANDEJA_NOTIFICACION_SPLASH.svg) 0 0 no-repeat;">
+                                </div>
+                            </td>
+                            <td *ngIf="otp">
+                                <button ion-button outline style="float: right;" (click)="home()">{{
+                                    'Afiliacion.btnView' | translate }}</button>
+                            </td>
+                        </tr>
+                    </table>
+                </ion-card-content>
+            </ion-card>
+
+            <!--Inicio verificacion de identidad-->
+            <ion-card style="width: 103%; border-radius: 7px;">
+                <ion-card-content style="padding: 0px 13px; font-size: 1.5rem; line-height: 1.5;">
+                    <table style="width: 100%;">
+                        <tr>
+                            <td>
+                                <span>
+                                    <ion-img src="assets/img/new/BANDEJA_VERIFICACION_ID.svg" style="margin-top: 5px;">
+                                    </ion-img>
+                                    <span style="font-size: 18px; margin-left: 5px;">
+                                        <!--{{ authType }}-->
+                                        {{ 'inboxMenu.bv' | translate }}
+                                    </span>
+                                </span>
+                            </td>
+                            <td style="text-align: -webkit-right;">
+                                <div style="width: 8px; height: 8px; background: url(../assets/img/new/BANDEJA_NOTIFICACION_SPLASH.svg) 0 0 no-repeat;">
+                                </div>
+                            </td>
+                            <td *ngIf="bv">
+                                <!--<td *ngIf="bv">-->
+                                <button ion-button outline (click)="home()" style="float: right;">{{
+                                    'Afiliacion.btnView' | translate }}</button>
+                            </td>
+                        </tr>
+                    </table>
+                </ion-card-content>
+            </ion-card>
+
+            <!--Inicio push-->
+            <ion-card style="width: 103%; border-radius: 7px;">
+                <ion-card-content style="padding: 0px 13px; font-size: 1.5rem; line-height: 1.5;">
+                    <table style="width: 100%;">
+                        <tr>
+                            <td>
+                                <span>
+                                    <ion-img src="assets/img/new/MENSAJE_NOTIFICACION_TRANSACCION.svg"
+                                        style="margin-top: 5px;"></ion-img>
+                                    <span style="font-size: 18px; margin-left: 5px;">
+                                        <!--{{ authType }}-->
+                                        PUSH
+                                    </span>
+                                </span>
+                            </td>
+                            <td style="text-align: -webkit-right;">
+                                <div style="width: 8px; height: 8px; background: url(../assets/img/new/BANDEJA_NOTIFICACION_SPLASH.svg) 0 0 no-repeat;">
+                                </div>
+                            </td>
+                            <td *ngIf="psh">
+                                <button ion-button outline (click)="home()" style="float: right;">{{
+                                    'Afiliacion.btnView' | translate }}</button>
+                            </td>
+                        </tr>
+                    </table>
+                </ion-card-content>
+            </ion-card>
+
+            <!--Inicio TK-->
+            <!-- <ion-card style="width: 103%; border-radius: 7px;">
+        <ion-card-content style="padding: 0px 13px; font-size: 1.5rem; line-height: 1.5;">
+          <table style="width: 100%;">
+            <tr>
+              <td>
+                <span>
+                  <ion-img src="assets/img/new/BANDEJA_TK.svg" style="margin-top: 5px;"></ion-img>
+                  <span style="font-size: 18px; margin-left: 5px;">
+                   {{ authType }} esta linea estaba comentada
+                    TK
+                  </span>
+                </span>
+              </td>
+              <td>
+                <div
+                  style="width: 8px; height: 8px; background: url(../assets/img/new/BANDEJA_NOTIFICACION_SPLASH.svg) 0 0 no-repeat;">
+                </div>
+              </td>
+              <td *ngIf="tk">
+                <button ion-button outline (click)="home()" style="float: right;">{{ 'Afiliacion.btnView' | translate }}</button>
+              </td>
+            </tr>
+          </table>
+        </ion-card-content>
+      </ion-card>
+    -->
+            <!--Inicio QR-->
+            <ion-card style="width: 103%; border-radius: 7px;">
+                <ion-card-content style="padding: 0px 13px; font-size: 1.5rem; line-height: 1.5;">
+                    <table style="width: 100%;">
+                        <tr>
+                            <td>
+                                <span>
+                                    <ion-img src="assets/img/new/BANDEJA_QR.svg" style="margin-top: 5px;"></ion-img>
+                                    <span style="font-size: 18px; margin-left: 5px;">
+                                        <!--{{ authType }}-->
+                                        QR
+                                    </span>
+                                </span>
+                            </td>
+                            <td style="text-align: -webkit-right;">
+                                <div style="width: 8px; height: 8px; background: url(../assets/img/new/BANDEJA_NOTIFICACION_SPLASH.svg) 0 0 no-repeat;">
+                                </div>
+                            </td>
+                            <td *ngIf="qr">
+                                <button ion-button outline (click)="home()" style="float: right;">{{
+                                    'Afiliacion.btnView' | translate }}</button>
+                            </td>
+                        </tr>
+                    </table>
+                </ion-card-content>
+            </ion-card>
+
+
+
+            <!--Inicio VB-->
+            <ion-card style="width: 103%; border-radius: 7px;">
+                <ion-card-content style="padding: 0px 13px; font-size: 1.5rem; line-height: 1.5;">
+                    <table style="width: 100%;">
+                        <tr>
+                            <td>
+                                <span>
+                                    <!-- <ion-img src="assets/img/new/BANDEJA_QR.svg" style="margin-top: 5px;"></ion-img>-->
+                                    <ion-icon style="  color: #FF3C00; " name="finger-print"></ion-icon>
+                                    <span style="font-size: 18px; margin-left: 5px;">
+                                        <!--{{ authType }}-->
+                                        {{ 'inboxMenu.biometrico' | translate }}
+                                    </span>
+                                </span>
+                            </td>
+                            <td style="text-align: -webkit-right;">
+                                <div style="width: 8px; height: 8px; background: url(../assets/img/new/BANDEJA_NOTIFICACION_SPLASH.svg) 0 0 no-repeat;">
+                                </div>
+                            </td>
+                            <td *ngIf="vb">
+                                <button ion-button outline (click)="home()" style="float: right;">{{
+                                    'Afiliacion.btnView' | translate }}</button>
+                            </td>
+                        </tr>
+                    </table>
+                </ion-card-content>
+            </ion-card>
+
+
+
+
+
+        </ion-card-content>
+    </ion-card>
+
+</ion-content>

@@ -1,0 +1,111 @@
+<ion-header>
+    <!--
+  <ion-navbar hideBackButton>
+    <button ion-button menu-toggle (click)="menu()">
+      <ion-icon name="menu"></ion-icon>
+    </button> 
+    <div id="logo"></div>
+    <div id="logOut" (click)="presentConfirm()"></div>
+  </ion-navbar>
+-->
+</ion-header>
+
+<ion-content class="todo" (ionScroll)="reiniciarSesion()" (click)="reiniciarSesion()">
+
+    <!--
+  <ion-label class="ttlProductOverView">{{ 'tk.Titulo' | translate }}</ion-label>
+  <br>
+  
+  <div>
+    <ion-label class="ttlProductOverView2">TOKEN</ion-label>
+  </div>
+  <br>
+  <div class="ttlProductOverView3">
+    <input type="TEXT" id="otp" [(ngModel)]="CA_OTP" size="9" maxlength="10" style="width: 45%;" placeholder="{{authData}}" disabled="{{isDisabled}}">
+  </div>
+
+  <div id="contenedorBtn">                       
+    <button ion-button outline (click)="authTk()" id="primerBoton" [disabled]="isBtnEnabled" >{{ 'tk.btn' | translate }}</button>
+  </div>
+  <br>
+
+  <div *ngIf="imgResStatus" class="confirmExitosa" > 
+  </div>
+  <p class="respServer">{{resp}}</p>
+  
+    <div *ngIf="errorAdicional" class="confirmFallida">
+    </div>
+-->
+
+    <ion-img style="width: 240px;
+                    height: 60px; 
+                    left: 15%;
+                    top: 40px;    
+                    position: absolute;
+                    margin-left: auto;
+                    margin:10px;
+                    display:block; 
+                    background: #F0F2F4;" src="assets/img/new/LOGO.svg">
+    </ion-img>
+
+    <br><br><br><br><br><br><br><br>
+
+    <ion-card>
+        <ion-card-content>
+
+            <table>
+                <tr>
+                    <td>
+                        <span class="devolver" (click)="devolverse()">
+            <ion-img src="assets/img/new/BANDEJA_DEVOLVERSE.svg"></ion-img>
+          </span>
+                        <span class="otp">
+            <ion-img src="assets/img/new/BANDEJA_TK.svg"></ion-img>
+          </span>
+                    </td>
+                </tr>
+                <br>
+                <tr>
+                    <td>
+                        <div class="texto">
+                            {{ 'tk.Titulo' | translate }}
+                        </div>
+                    </td>
+                </tr>
+                <br>
+                <tr>
+                    <td>
+                        <!-- Empieza -->
+
+                        <div class="ttlProductOverView3">
+                            <!--disabled="{{isDisabled}}"-->
+                            <input type="TEXT" id="otp" [(ngModel)]="CA_OTP" size="12" maxlength="10" style="width: 70%;" placeholder="{{authData}}" disabled="{{isDisabled}}">
+                        </div>
+
+                        <!-- Termina -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <br>
+                        <div id="contenedorBtn">
+                            <button ion-button outline (click)="authTk()" id="primerBoton" [disabled]="isBtnEnabled">{{ 'tk.btn' | translate }}</button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+            <br>
+
+            <div *ngIf="imgResStatus" class="confirmExitosa">
+            </div>
+            <p class="respServer">{{resp}}</p>
+
+            <div *ngIf="errorAdicional" class="confirmFallida">
+            </div>
+
+        </ion-card-content>
+    </ion-card>
+
+
+</ion-content>

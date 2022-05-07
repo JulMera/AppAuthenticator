@@ -1,0 +1,101 @@
+<ion-header>
+
+    <!--
+  <ion-navbar hideBackButton>
+    <button ion-button menu-toggle (click)="menu()">
+      <ion-icon name="menu"></ion-icon>
+    </button> 
+    <div id="logo"></div>
+    <div id="logOut" (click)="presentConfirm()"></div>
+  </ion-navbar>
+-->
+
+</ion-header>
+
+<ion-content class="todo" (ionScroll)="reiniciarSesion()" (click)="reiniciarSesion()">
+
+    <!--
+  <ion-label class="ttlProductOverView">{{ 'userSecurity' | translate }}</ion-label>
+  <br>
+  
+  <div>
+    <ion-label class="ttlProductOverView2">{{ 'userSecurityTitulo' | translate }}</ion-label>
+  </div>
+  <br>
+  <div class="ttlProductOverView3">
+    <ion-card *ngIf="mostrarCreatedCode">
+      <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>
+    </ion-card>
+  </div>
+
+  <div id="contenedorBtn">                       
+    <button ion-button outline (click)="authUserSecure()" id="primerBoton" [disabled]="isBtnEnabled" >{{ 'tk.btn' | translate }}</button>
+  </div>
+  <br>
+-->
+
+    <ion-img style="width: 240px;
+                height: 60px; 
+                left: 15%;
+                top: 40px;    
+                position: absolute;
+                margin-left: auto;
+                margin:10px;
+                display:block; 
+                background: #F0F2F4;" src="assets/img/new/LOGO.svg">
+    </ion-img>
+
+    <br><br><br><br><br><br><br><br>
+
+    <ion-card>
+        <ion-card-content>
+
+            <table>
+                <tr>
+                    <td>
+                        <span class="devolver" (click)="devolverse()">
+            <ion-img src="assets/img/new/BANDEJA_DEVOLVERSE.svg"></ion-img>
+          </span>
+                        <span class="otp">
+            <ion-img src="assets/img/new/PANTALLA_USUARIO_SEGURO.svg"></ion-img>
+          </span>
+                    </td>
+                </tr>
+                <br><br>
+                <tr>
+                    <td>
+                        <div class="texto">
+                            {{ 'userSecurityTitulo' | translate }}
+                        </div>
+                    </td>
+                </tr>
+                <br>
+                <tr>
+                    <td>
+                        <!-- Empieza -->
+
+                        <div class="ttlProductOverView3" style="box-shadow: 0px 0px 5px 1px rgb(199, 131, 131); border-radius: 8px;">
+                            <div *ngIf="mostrarCreatedCode">
+                                <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>
+                            </div>
+                        </div>
+
+                        <!-- Termina -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <br>
+                        <div id="contenedorBtn">
+                            <button ion-button outline (click)="authUserSecure()" id="primerBoton" [disabled]="isBtnEnabled">{{ 'tk.btn' | translate }}</button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </ion-card-content>
+    </ion-card>
+
+
+
+</ion-content>

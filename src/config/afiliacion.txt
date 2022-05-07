@@ -1,0 +1,44 @@
+------externo-----
+
+ADMINEX 
+numclient = "123456789"; 
+identype =  "AS";
+idennumb =  "12345";
+
+INSERT INTO public.e2datnot
+(e2empr, e2cusc, identificator, e2idchnot, e2vlchnot, e2status, cha_auth, cha_send, e2uschnot, e2coidnot, identificator_type, authtype, e2emisor)
+VALUES(1, 123456789, '12345', 'ATH', 'ADMINEXT', 'I', 'I', 'A', 'ADMINEXT', '', 'AS', 'OT', 'BACOLOMBIA');
+
+
+
+-------interno-----------------------
+
+crear usuario 
+http://localhost:8097/apiServices/eic/callAddPassword/
+{
+    "company": "1",
+    "channel": "WEB",
+    "externalUserName": "juandavidext",
+    "internalUserName": "PYT",
+    "identificator": "adminint",
+    "password": "zxcvbnm1@",
+    "service": "STD"
+}
+header 
+Content-Type application/json
+apikey   sdsddsd
+
+despues de crear hay que reemplazar id Tabla E2CPCLF 1WEBSTDRJDHYQ==1
+
+ADMININT
+numclient = "1455"; 
+identype =  "AS";
+idennumb =  "987654321";
+
+INSERT INTO public.e2usapf
+(e2empr, e2cusc, e2usm2, e2ctm2, e2esm2, e2num2, e2pam2, e2nam2, e2cfu2, e2cam2, e2erm2, e2fdm2, e2fhm2, e2him2, e2hhm2, e2obm2, e2fam2, e2ham2, e2uam2, e2fmm2, e2hmm2, e2umm2, e2drm2, e2ema2, e2ema1, e2tfm2, e2tfm1, e2ext2, e2crg2, e2ftm2, e2pacm, e2iden, e2ctac, e2tard, e2fimp, e2prse, e2rese, e2orcn, e2tpcn, e2mcon, e2recp, e2vre1, e2serv, e2ticli)
+VALUES(1, 1455, '2355', NULL, 'A', 'Usuario Administrador Interno', NULL, 'MA', 'A', NULL, NULL, 20210101, 20210101, 0, 0, 'ADMININT', 20210101, 130101, NULL, 20210101, 130101, '2355', NULL, 'marluzch@gmail.com', 'marluzch@gmail.com', '6618020', '3113728091', NULL, NULL, 'AS', NULL, '987654321', 0, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2');
+
+INSERT INTO e2datnot (e2empr,e2cusc,identificator,e2idchnot,e2vlchnot,e2status,cha_auth,cha_send,e2uschnot,e2coidnot,identificator_type,authtype,e2emisor) VALUES 
+(1,1455,'987654321','ATH','ADMININT','I','I','A','35','uhiv6xoywp','AS','OT','PYT')
+;

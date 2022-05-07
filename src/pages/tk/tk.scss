@@ -1,0 +1,139 @@
+page-tk {
+
+    .ttlProductOverView2{
+        background: #5f5f5f;
+        color: white;
+        padding: 5px; 
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        margin-top: -2%;
+    }
+
+    .ttlProductOverView3{
+        //padding: 5px; 
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        margin-top: 5%;
+    }
+
+    .infoInput {
+        margin-left: 35%;
+        margin-top: 5%;   
+    }
+
+    //Scroll lateral derecho para ocultar
+    .scroll-content { overflow-y: hidden; }
+
+    #contenedorBtn { margin-top: 3% }
+
+    .centrado { margin-top: 35% }
+
+    .text-input {
+        margin: 6px 4px;
+    }
+
+    #otp{
+      font-size: 20px;
+      text-align: center;
+      background: #F0F2F4;
+      box-shadow: 0px 0px 5px 1px white;
+      border: 0;
+    }
+
+    .divTable { margin-left: 2% }
+
+    ion-app.md [padding] {
+        padding: 2px;
+    }
+
+
+    .confirmExitosa{
+        background: url(../assets/img/new/MENSAJE_VALIDO.svg) 0 0 no-repeat;
+        height: 80px;
+        width: 80px ;
+        margin: auto; 
+    }
+
+    .confirmFallida{
+        background: url(../assets/img/new/MENSAJE_INVALIDO.svg) 0 0 no-repeat;
+        height: 80px;
+        width: 80px ;
+        margin: auto; 
+    }
+
+    .respServer{
+        text-align: center; 
+    }
+
+    //Barra de menu - color blanco
+    .ion-md-menu:before {
+        content: "\f32a";
+        color: white;
+    }
+
+
+    //******************************************
+
+    // Las nuevas modificaciones que sugerio esteban 27 de abril 2020
+
+    // Tamaño de los iconos
+    ion-img {
+
+        width: 35px;
+        height: 35px;
+        background: transparent;
+
+    }
+
+    // estilo icono otp
+    .otp{
+        float: right;
+        margin-right: 5px;
+    }
+
+    // estilo icono regresar
+    .devolver{
+        margin-left: 5px;
+    }
+
+    table{
+        width: 100%;
+    }
+
+    // estilo texto tarjeta de coordenadas
+    .texto {
+
+        font-size: 20px;
+        text-align: center;
+        color: #323232;
+        font-family: Helvetica;
+        font-weight: bold;    
+    }
+
+    // estilo icono regresar
+    .devolver{
+        margin-left: 5px;
+    }
+
+    // color y estilo botones
+    .button-outline {
+
+        border-color: #FFF;
+        color: #FFF;
+    
+    }
+
+    // estilo del ion-card
+    .card{
+        border-radius: 25px;   
+        padding: 3px;  
+        width: calc(97% - 20px);
+        margin-left: auto;
+    }
+
+    // estilo del ion-card
+    .card-content {
+        background: #F0F2F4;
+    }
+
+}

@@ -1,0 +1,29 @@
+<ion-header>
+
+   <!--  <ion-navbar>
+      <div id="logoBack"></div>   
+      <div id="logo"></div>
+      <div id="logOut" (click)="logout()"></div>
+    </ion-navbar> -->
+  
+  </ion-header>
+
+
+<ion-content class="todo"   (ionScroll)="reiniciarSesion()"  (click)="reiniciarSesion()">
+
+    <br>
+    <ion-card>
+      <ion-card-content>
+
+        <div align="justify" style="padding: 20px;" [innerHtml]="html"></div>
+
+        <div id="contenedorBtn">
+          <button ion-button outline (click)="cancelar()" id="btnLogin" style="box-shadow: 0px 0px 5px 1px white;">{{ 'confirm.btnCancelar' | translate }}</button>
+          <button ion-button outline (click)="aceptar()" id="btnLogin" style="box-shadow: 0px 0px 5px 1px white;">{{ 'confirm.btnAceptar' | translate }}</button>
+        </div>
+
+      </ion-card-content>
+    </ion-card>
+
+
+</ion-content>

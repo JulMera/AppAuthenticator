@@ -1,0 +1,81 @@
+page-bandeja-menu {
+
+
+   table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    // Modificaciones sugeridas por sebastian 27 de abril de 2020
+
+    // color campo Log in
+   .bandeja{
+        color: black;
+        font-family: Helvetica;
+        font-weight: bold;
+        font-size: 23px;
+        margin-left: 5px;
+    }
+
+    // color del campo info data
+    .data{
+        font-size: 11px;
+        color: #323232;
+        margin-left: 5px;
+    }
+
+    table td {
+        text-align: left;
+    }
+
+    // tamaño del icono de la bandeja
+    ion-img {
+
+        width: 45px;
+        height: 47px;
+        background-color: transparent;
+
+    }
+
+    .opciones{
+        color: black;
+        font-family: Helvetica;
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    .texto{
+        font-size: 8px;
+        color: #323232;
+    }
+
+    // Relleno contenido del ion-card
+    .card-content {
+        background: #F0F2F4;
+    }
+
+    // estilo del ion-card - Efecto del color blanco
+    .card {
+        border-radius: 25% 10%; 
+        padding: 1px;  
+        width: calc(97% - 20px);
+        margin-left: auto;
+    }
+
+
+    .numUno{
+        margin-left: -17px;
+        margin-top: -5px;
+        font-size: 20px;
+        font-weight: bold;
+        width: 30px;
+        height: 30px;
+        float: right;
+        margin-right: 30px;
+        background: #E3E6E9;
+        border-radius: 14px;
+        box-shadow: 0px 0px 5px 1px white;
+    }
+    
+}

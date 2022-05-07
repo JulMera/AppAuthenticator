@@ -1,0 +1,231 @@
+<ion-header>
+</ion-header>
+<ion-content class="todo" (ionScroll)="reiniciarSesion()" (click)="reiniciarSesion()">
+
+    <div style=" text-align:center !important;
+    margin-top: 40px;  width: 100%;">
+        <ion-img src="assets/img/new/LOGO.svg">
+        </ion-img>
+
+    </div>
+    <br><br><br><br><br><br><br><br>
+    <!-- Preguntas Tipo C -->
+    <div id="tipoC" *ngIf="typeQ == 'C' || typeQ == 'A' || typeQ == 'N' || typeQ == 'S' || typeQ == 'M' || typeQ == 'R'">
+        <ion-card>
+            <ion-card-content>
+                <!--empieza-->
+                <table>
+                    <tr *ngIf="mostrarDevolver">
+                        <td>
+                            <span class="devolver" (click)="devolverse()">                            
+                                <div id="regresarVP"></div>
+                            </span>
+                            <span class="otp">                             
+                                <div id="VP"></div>
+                            </span>
+                        </td>
+                    </tr>
+                    <br><br>
+                    <tr>
+                        <td>
+                            <div class="texto">
+                                {{ 'validacionPos.titulo' | translate }}
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <!--termina-->
+                <!-- Preguntas Tipo C-->
+                <div href="#" class="activated" *ngIf="typeQ == 'C'">
+                    <p style="font-size: initial; margin-top: 20px; color: #323232;">{{textQ}}</p>
+                </div>
+                <br *ngIf="typeQ == 'C'">
+                <div *ngIf="typeQ == 'C'">
+                    <ion-input [(ngModel)]="answerQuestion" type="password" placeholder="{{ 'validacionresp' | translate }}" id="otp"></ion-input>
+                </div>
+
+                <!-- Preguntas Tipo A-->
+                <div href="#" class="activated" *ngIf="typeQ == 'A'">
+                    <p style="font-size: initial; margin-top: 20px; color: #323232;">{{textQ}}</p>
+                </div>
+                <br *ngIf="typeQ == 'A'">
+                <div *ngIf="typeQ == 'A'">
+                    <ion-input [(ngModel)]="answerQuestion" type="text" placeholder="{{ 'validacionresp' | translate }}" id="otp"></ion-input>
+                </div>
+                <br>
+                <!-- Preguntas Tipo N-->
+                <div href="#" class="activated" *ngIf="typeQ == 'N'">
+                    <p style="margin: 8px; font-size: inherit; align-content: justify;">{{textQ}}</p>
+                </div>
+                <br *ngIf="typeQ == 'N'">
+                <div *ngIf="typeQ == 'N'">
+                    <ion-input [(ngModel)]="answerQuestion" type="number" placeholder="{{ 'validacionresp' | translate }}" id="otp"></ion-input>
+                </div>
+                <!-- Preguntas Tipo S -->
+                <div href="#" class="activated" *ngIf="typeQ == 'S'">
+                    <p style="margin-top: 10px; font-size: inherit; align-content: justify;">{{textQ}}</p>
+                </div>
+                <br *ngIf="typeQ == 'S'">
+                <div style="margin-top: -5px;" *ngIf="typeQ == 'S'">
+                    <ion-list radio-group [(ngModel)]="answerQuestion">
+                        <table>
+                            <tr>
+                                <td>
+                                    <span>
+                                        <ion-radio value="S" checked="true" style="margin-top: 0px; padding-bottom: 6px; padding-left: 8px;"></ion-radio>
+                                    </span>
+                                    <span style="float: right; margin-right: 77%;">
+                                        <ion-label>{{ 'addAccount.yes' | translate }}</ion-label>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>
+                                        <ion-radio value="N" style="margin-top: 0px; padding-bottom: 6px; padding-left: 8px;"></ion-radio>
+                                    </span>
+                                    <span style="float: right; margin-right: 78%; margin-top: 5px;">
+                                        <ion-label>{{ 'addAccount.no' | translate }}</ion-label>
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                    </ion-list>
+                </div>
+                <!-- Preguntas Tipo M-->
+                <div href="#" *ngIf="typeQ == 'M'">
+                    <p style="font-size: initial; margin-top: 20px; color: #323232;">{{textQ}}</p>
+                </div>
+                <br *ngIf="typeQ == 'M'">
+
+                <ion-grid *ngIf="typeQ == 'M'">
+                    <ion-row nowrap>
+                        <ion-col col-2>
+                            <ion-checkbox [(ngModel)]="option1"></ion-checkbox>
+                        </ion-col>
+                        <ion-col>
+                            <div class="prueba">{{option1_texto}}</div>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col col-2>
+                            <ion-checkbox [(ngModel)]="option2"></ion-checkbox>
+                        </ion-col>
+                        <ion-col>
+                            <div class="prueba">{{option2_texto}}</div>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col col-2>
+                            <ion-checkbox [(ngModel)]="option3"></ion-checkbox>
+                        </ion-col>
+                        <ion-col>
+                            <div class="prueba">{{option3_texto}}</div>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+                <!-- Preguntas Tipo R-->
+                <div href="#" *ngIf="typeQ == 'R'">
+                    <p style="font-size: initial; margin-top: 20px; color: #323232;">{{textQ}}</p>
+                </div>
+                <br *ngIf="typeQ == 'R'">
+                <table *ngIf="typeQ == 'R'">
+                    <tr>
+                        <td>
+                            <ion-checkbox [(ngModel)]="option1"></ion-checkbox>
+                        </td>
+                        <td>
+                            <ion-label>{{option1_texto}}</ion-label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ion-checkbox [(ngModel)]="option2"></ion-checkbox>
+                        </td>
+                        <td>
+                            <ion-label>{{option2_texto}}</ion-label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ion-checkbox [(ngModel)]="option3"></ion-checkbox>
+                        </td>
+                        <td>
+                            <ion-label>{{option3_texto}}</ion-label>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <div *ngIf="totalQ <= cantQ">
+                    <span *ngIf="totalQ > 1">                       
+                        <button
+                            style="float: left; box-shadow: 0px 0px 5px 1px white; width: 90px; border-radius: 10px; height: 36px;"
+                            (click)="back()">
+                          
+                            <ion-icon ios="md-arrow-round-back" md="md-arrow-round-back"
+                                style="margin-top: 2px; min-height: 30px; color: #FF3C00;"></ion-icon>
+                        </button>
+                    </span>
+                </div>
+                <div *ngIf="totalQ < cantQ">
+                    <span *ngIf="typeQ != 'M' && typeQ != 'R'   ">            
+                    <button
+                        style="float: right; box-shadow: 0px 0px 5px 1px white; width: 90px; border-radius: 10px; height: 36px;"
+                        (click)="next(answerQuestion)">
+                        <ion-icon ios="md-arrow-round-forward" md="md-arrow-round-forward"
+                            style="margin-top: 2px; min-height: 30px; color: #FF3C00;"></ion-icon>
+                    </button>
+                </span>
+                    <button *ngIf="typeQ == 'M' || typeQ == 'R'  " style="float: right; box-shadow: 0px 0px 5px 1px white; width: 90px; border-radius: 10px; height: 36px;" (click)="nextPage()">
+                        <ion-icon ios="md-arrow-round-forward" md="md-arrow-round-forward"
+                            style="margin-top: 2px; min-height: 30px; color: #FF3C00;"></ion-icon>
+                    </button>
+                </div>
+
+                <!-- *ngIf="btnPreguntas"-->
+                <div *ngIf="btnPreguntas">
+                    <div *ngIf="totalQ == cantQ">
+                        <div id="contenedorBtn">
+                            <button style="float: right; box-shadow: 0px 0px 5px 1px white; width: 90px; border-radius: 10px; height: 36px; color: #FF3C00; font-weight: bold; font-size: medium;" (click)="mostrarDatos()">                               
+                                {{ 'validacionPos.btn' | translate }}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </ion-card-content>
+        </ion-card>
+    </div>
+    <!--Aqui termina todo la configuracion de las preguntas de validacion positiva-->
+    <ion-card style="height: 45%;" *ngIf="mostrarValidacion">
+        <ion-card-content>
+            <!--empieza-->
+            <table>
+                <tr *ngIf="mostrarDevolver">
+                    <td>
+                        <span class="devolver" (click)="devolverse()">                         
+                            <div id="regresarVP"></div>
+                        </span>
+                        <span class="otp">                            
+                            <div id="VP"></div>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="texto">
+                            {{ 'validacionPos.titulo' | translate }}
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <!--termina-->
+            <!-- -->
+            <div *ngIf="imgResStatus" class="confirmExitosa"></div>
+            <div *ngIf="errorAdicional" class="confirmFallida"></div>
+            <br>
+            <!---->
+            <p *ngIf="imgResStatus" class="respServer" style="color: #D2D20A; font-family: Helvetica;">{{ resp }}</p>
+            <p *ngIf="imgResStatus2" class="respServer" style="color: #FF3C00;  font-family: Helvetica;">{{ resp }}</p>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

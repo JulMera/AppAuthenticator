@@ -1,0 +1,40 @@
+page-condiciones {
+
+    //Scroll lateral derecho para ocultar
+    //.scroll-content { overflow-y: hidden; }
+
+    // estilo del ion-card
+    .card {
+        border-radius: 25px;   
+        padding: 3px;  
+        width: calc(97% - 20px);
+        margin-left: auto;
+    }
+
+    // Relleno contenido del ion-card
+    .card-content {
+        background: #F0F2F4;
+    }
+
+     // color campo Registro
+   .condiciones{
+        color: black;
+        font-family: Helvetica;
+        font-weight: bold;
+        font-size: 20px;
+        margin-left: 4%;
+        //margin: auto;
+    }
+
+    // tamaño botones
+    #btnLogin{ margin-left: 2%; width: 45%; border-radius: 4px;}
+
+    // borde de los botones
+    .button-outline {
+
+        border-color: #FFF;
+        color: #FFF;
+    
+    }
+
+}

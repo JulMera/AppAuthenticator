@@ -1,0 +1,217 @@
+<ion-header>
+
+    <!--<ion-navbar hideBackButton>
+    <button ion-button menu-toggle (click)="menu()">
+        <ion-icon name="menu"></ion-icon>
+    </button>     
+    <div id="logo"></div>
+    <div id="logOut" (click)="presentConfirm()"></div>
+  </ion-navbar>-->
+
+</ion-header>
+
+<ion-content class="todo" (ionScroll)="reiniciarSesion()" (click)="reiniciarSesion()">
+
+    <!--<ion-label class="ttlProductOverView">{{ 'Afiliacion.btn2' | translate }}</ion-label>
+  <br>
+  <table>
+    <tr>
+      <th>{{ 'Afiliacion.request' | translate }}</th>
+      <th><button style="background: white;" (click)="refreshInbox()"><ion-icon ios="ios-refresh" md="md-refresh"></ion-icon></button></th>
+    </tr>
+    <tr>
+      <td>{{ authType }}</td>
+      <td><button ion-button outline (click)="home()">{{ 'Afiliacion.btnView' | translate }}</button></td>
+    </tr>
+  </table>-->
+
+    <ion-img style="width: 240px;
+                  height: 60px; 
+                  left: 15%;
+                  top: 40px;    
+                  position: absolute;
+                  margin-left: auto;
+                  margin:10px;
+                  display:block; 
+                  background: #F0F2F4;" src="assets/img/new/LOGO.svg">
+    </ion-img>
+
+    <br><br><br><br><br><br><br><br><br>
+
+    <ion-card>
+        <ion-card-content>
+
+            <table>
+                <tr (click)="inbox()">
+                    <td>
+                        <ion-img src="assets/img/new/MENU_BANDEJA.svg"></ion-img>
+                    </td>
+                    <td>
+                        <div class="bandeja">
+                            {{ 'Tabs.inbox' | translate }}
+                            <p class="numUno" *ngIf="notaContador">
+                                <span style="color: #FF3C00; margin-left: 10px; font-weight: bold;">1</span>
+                            </p>
+                        </div>
+                        <div class="data">
+                            {{ 'inbox.tareas' | translate }}
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </ion-card-content>
+    </ion-card>
+
+    <table>
+        <tr>
+            <td style="width:50%;" (click)="bandeja('tc')">
+                <ion-card>
+                    <ion-card-content>
+                        <ion-img src="assets/img/new/BANDEJA_TC.svg"></ion-img>
+                        <div class="opciones">
+                            {{ 'bandejaMenu.title.TC' | translate }}
+                        </div>
+                        <div class="texto">
+                            {{ 'bandejaMenu.TC' | translate }}
+                        </div>
+                    </ion-card-content>
+                </ion-card>
+            </td>
+
+            <!--<td style="width:50%;" (click)="bandeja('qr')">
+        <ion-card>
+          <ion-card-content>
+            <ion-img src="assets/img/new/BANDEJA_QR.svg"></ion-img>
+            <div class="opciones">
+              QR
+            </div>
+            <div class="texto">
+              {{ 'bandejaMenu.QR' | translate }}
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </td>-->
+            <td style="width:50%;" (click)="bandeja('ul')">
+                <ion-card>
+                    <ion-card-content>
+                        <ion-img src="assets/img/new/PANTALLA_USUARIO_SEGURO.svg"></ion-img>
+                        <div class="opciones">
+                            {{ 'userSecurityTitulo' | translate }}
+                        </div>
+                        <div class="texto">
+                            {{ 'bandejaMenu.UL' | translate }}
+                        </div>
+                    </ion-card-content>
+                </ion-card>
+            </td>
+
+
+        </tr>
+
+        <tr>
+            <!--<td style="width:50%;" (click)="bandeja('ul')">
+        <ion-card>
+          <ion-card-content>
+            <ion-img src="assets/img/new/PANTALLA_USUARIO_SEGURO.svg"></ion-img>
+            <div class="opciones">
+              {{ 'userSecurityTitulo' | translate }}
+            </div>
+            <div class="texto">
+              {{ 'bandejaMenu.UL' | translate }}
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </td>-->
+            <td style="width:50%;" (click)="bandeja('tk')">
+                <ion-card>
+                    <ion-card-content>
+                        <ion-img src="assets/img/new/BANDEJA_TK.svg"></ion-img>
+                        <div class="opciones">
+                            Token
+                        </div>
+                        <div class="texto">
+                            {{ 'bandejaMenu.TK' | translate }}
+                        </div>
+                    </ion-card-content>
+                </ion-card>
+            </td>
+            <td style="width:50%;" (click)="bandeja('tkqr')">
+                <ion-card>
+                    <ion-card-content>
+                        <ion-img src="assets/img/new/BANDEJA_TKQR.svg"></ion-img>
+                        <div class="opciones">
+                            Token-QR
+                        </div>
+                        <div class="texto">
+                            {{ 'bandejaMenu.TKQR' | translate }} <br>
+                        </div>
+                    </ion-card-content>
+                </ion-card>
+            </td>
+        </tr>
+
+        <tr>
+            <!-- <td style="width:50%;" (click)="bandeja('tk')">
+        <ion-card>
+          <ion-card-content>
+            <ion-img src="assets/img/new/BANDEJA_TK.svg"></ion-img>
+            <div class="opciones">
+              TOKEN
+            </div>
+            <div class="texto">
+              {{ 'bandejaMenu.TK' | translate }}
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </td>-->
+            <td style="width:50%;" (click)="bandeja('desa')">
+                <ion-card>
+                    <ion-card-content>
+                        <ion-img src="assets/img/new/MENU_DESAFILIAR.svg"></ion-img>
+                        <div class="opciones">
+                            {{ 'Desafiliar' | translate }}
+                        </div>
+                        <div class="texto">
+                            {{ 'bandejaMenu.DESAFILIAR' | translate }}
+                        </div>
+                    </ion-card-content>
+                </ion-card>
+            </td>
+            <td style="width:50%;" (click)="bandeja('exit')">
+                <ion-card>
+                    <ion-card-content>
+                        <ion-img src="assets/img/new/PANTALLA_SALIR.svg"></ion-img>
+                        <div class="opciones">
+                            {{ 'Login.salir' | translate }}
+                        </div>
+                        <div class="texto">
+                            {{ 'bandejaMenu.SALIR' | translate }}
+                        </div>
+                    </ion-card-content>
+                </ion-card>
+            </td>
+
+
+        </tr>
+        <!--<tr>
+      <td style="width:50%;" (click)="bandeja('exit')">
+        <ion-card>
+          <ion-card-content>
+            <ion-img src="assets/img/new/PANTALLA_SALIR.svg"></ion-img>
+            <div class="opciones">
+              {{ 'Login.salir' | translate }}
+            </div>
+            <div class="texto">
+              {{ 'bandejaMenu.SALIR' | translate }}
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </td>
+      <td style="width:50%;">
+        
+      </td>
+    </tr>-->
+    </table>
+
+</ion-content>

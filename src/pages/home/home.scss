@@ -1,0 +1,147 @@
+page-home {
+
+    .ttlProductOverView2{
+        background: #5f5f5f;
+        color: white;
+        padding: 5px; 
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        margin-top: -2%;
+    }
+
+    .ttlProductOverView3{
+        padding: 5px; 
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        margin-top: -2%;
+    }
+
+    .infoInput {
+        margin-left: 35%;
+        margin-top: 5%;   
+    }
+
+    //Scroll lateral derecho para ocultar
+    //.scroll-content { overflow-y: hidden; }
+
+    .centrado { margin-top: 35% }
+
+    .text-input {
+        margin: 6px 4px;
+    }
+
+    .divTable { margin-left: 2% }
+
+    ion-app.md [padding] {
+        padding: 2px;
+    }
+
+    .respServer{
+        text-align: center; 
+    }
+
+    //Barra de menu - color blanco
+    .ion-md-menu:before {
+        content: "\f32a";
+        color: white;
+    }
+
+    ///**********************************************
+    // Modificaciones nuevas que sugirio sebastian
+
+    // estilo OTP Validacion
+    .texto{
+        font-size: 25px;
+        color: #323232;
+        font-family: Helvetica;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    // estilo icono otp
+    .otp{
+        float: right;
+        margin-right: 5px;
+    }
+
+    // estilo icono regresar
+    .devolver{
+        margin-left: 5px;
+    }
+
+    // Tamaño de los iconos
+    ion-img {
+
+        width: 35px;
+        height: 35px;
+        background: #F0F2F4;
+
+    }
+
+    // estilo input
+    .inputOTP{
+        width: 98%; 
+        height: 35px; 
+        margin-top: 6px;
+        border: 0;
+        border-bottom: 1px solid #323232;
+        background: #F0F2F4;
+    }
+
+    // tamaño dentro del input
+    #otp{
+        font-size: 35px;
+        text-align: center;
+        color: #da0000;
+    }
+
+    // margen del boton
+    #contenedorBtn { margin-top: 5% }
+
+    // color y estilo botones
+    .button-outline {
+
+        border-color: #FFF;
+        color: #FFF;
+    
+    }
+
+    // estilo del ion-card
+    .card {
+        border-radius: 25px;   
+        padding: 3px;  
+        width: calc(97% - 20px);
+        margin-left: auto;
+    }
+
+    // estilo del ion-card
+    .card-content {
+        background: #F0F2F4;
+        }
+
+    table{
+        width: 100%;
+    }
+
+    .p{
+        text-align: center;
+        color: #FF3C00;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .confirmExitosa{
+        background: url(../assets/img/new/MENSAJE_VALIDO.svg) 0 0 no-repeat;
+        height: 40px;
+        width: 40px ;
+        margin: auto; 
+    }
+
+    .confirmFallida{
+        background: url(../assets/img/new/MENSAJE_INVALIDO.svg) 0 0 no-repeat;
+        height: 40px;
+        width: 40px ;
+        margin: auto; 
+    }
+
+}

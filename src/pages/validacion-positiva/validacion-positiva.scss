@@ -1,0 +1,205 @@
+page-validacion-positiva {
+
+    /*table{
+        margin: auto;
+        width: 60%;
+    }*/
+
+    .toggle-md.toggle-checked .toggle-inner {
+        transform: translate3d(29px, 0px, 0);
+
+    }
+
+    //Scroll lateral derecho para ocultar
+    //.scroll-content { overflow-y: hidden; }
+
+    #contenedorBtn {
+        //margin-left: 20px;
+        margin-top: 0px;
+        text-align: center;
+    }
+
+    #tipoC, #tipoA, #tipoN, #tipoS, #tipoM{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        width: 90%;
+        margin-top: 30px;
+    } 
+
+    //Barra de menu - color blanco
+    .ion-md-menu:before {
+        content: "\f32a";
+        color: white;
+    }
+
+    .label{
+
+        margin: 3;
+        text-align: left;
+        display: block;
+        overflow: hidden;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        font-size: inherit;
+        text-overflow: ellipsis;
+        white-space: initial;
+    
+    }
+
+    .confirmExitosa{
+        background: url(../assets/img/new/MENSAJE_VALIDO.svg) 0 0 no-repeat;
+        height: 40px;
+        width: 40px ;
+        margin: auto; 
+        margin-top: 10%;
+    }
+
+    .confirmFallida{
+        background: url(../assets/img/new/MENSAJE_INVALIDO.svg) 0 0 no-repeat;
+        height: 40px;
+        width: 40px ;
+        margin: auto; 
+        margin-top: 10%;
+    }
+
+    .respServer{
+        text-align: center; 
+    }
+
+
+    //////****************************************************
+
+    // modificaciones que sugerio sebastian 27 de abril de 2020
+
+        // color y estilo botones
+        .button-outline {
+
+            border-color: #FFF;
+            color: #FFF;
+        }
+    
+        // estilo del ion-card
+        .card {
+            border-radius: 25px;   
+            padding: 3px;  
+            width: calc(97% - 20px);
+            margin-left: auto;
+            background: #F0F2F4;
+            margin-top: 20%;
+         
+        }
+    
+        // estilo del ion-card
+        .card-content {
+            background: #F0F2F4;
+            padding-bottom: 5%;
+            min-height: 310px;
+            margin-top: 1%;
+        }
+
+        ion-card {
+            display: block;
+            overflow: hidden;
+            padding-bottom: 5% !important;
+        }
+
+        // Tamaño de los iconos
+    ion-img {
+
+        width: 35px;
+        height: 35px;
+        background: transparent;
+
+    }
+
+    // estilo icono otp
+    .otp{
+        float: right;
+        margin-right: 5px;
+    }
+
+    // estilo icono regresar
+    .devolver{
+        margin-left: 5px;
+    }
+
+    table{
+        width: 100%;
+    }
+
+    // estilo texto tarjeta de coordenadas
+    .texto {
+
+        font-size: 20px;
+        text-align: center;
+        color: #323232;
+        font-family: Helvetica;
+        font-weight: bold;    
+        margin-top: 10px;
+    }
+
+    // estilo icono regresar
+    .devolver{
+        margin-left: 5px;
+    }
+
+    #otp{
+        font-size: 15px;
+        text-align: center;
+        background: #F0F2F4;
+        box-shadow: 0px 0px 5px 1px white;
+        border: 0;
+      }
+
+      .ttlProductOverView3{
+        //padding: 5px; 
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        margin-top: 5%;
+    }
+
+    .tipoInput{
+        margin-top: -10px;    
+    }
+
+    .checkbox-md .checkbox-icon {
+        margin-top: 13px;
+        margin-right: -10px;
+        margin-bottom: 9px;
+        margin-left: 8px;
+    
+    }
+
+     
+    ion-img { 
+            
+        width: 280px;
+        height: 60px;     
+        background: #F0F2F4;  
+      }
+
+}
+
+.ios{
+    page-validacion-positiva {
+
+    .prueba {
+   padding-top: 1%;
+   padding-bottom: 7%;
+}}
+
+}
+.md{
+
+    page-validacion-positiva {
+    .prueba{
+   padding-top: 5%;
+   padding-bottom: 5%;
+}
+} 
+}

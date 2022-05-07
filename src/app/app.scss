@@ -1,0 +1,426 @@
+
+
+
+.label-md { margin: 0px 0px 0px 0; }
+
+.item-md.item-block .item-inner { padding-right: 2px; border-bottom: 1px solid #dedede; }
+
+.item-inner { padding-right: 2px; border-bottom: 1px solid #dedede; } 
+
+#logo {
+    width: 120px;
+    height: 50px;
+    background: url(../assets/img/logo120_N.png) 0 0 no-repeat;
+    left: 54%;
+    right: unset;
+    top: 8px;
+    margin: 0 0 0 -63px;    // PARA ANDROID
+    //margin: 20px 0 0 -63px; // PARA IOS
+    position: absolute;
+}
+
+#logOut {
+    width: 30px;
+    height: 30px;
+    background: url(../assets/img/Logout.png) 0 0 no-repeat;
+    right: 10px;   
+    top: 15px;
+    margin: 0 0 0 0px;    // PARA ANDROID
+    //margin: 22px 0 0 0px; // PARA IOS
+    position: absolute;   
+}
+
+.toolbar-background {
+    height: 60px; // PARA ANDROID
+    //height: 80px; // PARA IOS
+}
+
+   //PARA IOS
+.ion-ios-menu:before {
+    content: "\f1c3";
+    color: white;
+}
+
+// PARA IOS
+.label-ios {
+    margin: 0px 0 0 0;
+}
+
+//PARA IOS
+ion-icon {
+    display: inline-block;
+    font-size: 2.2em;
+}
+
+#logoBack {
+    width: 30px;
+    height: 30px;
+    left: 10px;    
+    top: 15px;    
+    position: absolute;
+}
+
+#logOut2 {
+    width: 30px;
+    height: 30px;
+    background: url(../assets/img/prueba.png) 0 0 no-repeat;
+    right: 10px;   
+    top: 15px;
+    margin: 0 0 0 0px;
+    margin-left: 10px;
+    margin-top: 8px; 
+}
+
+//Titulo
+.titulo {
+    padding: 5px;
+    font-size:small;
+    text-align: center;
+    background: #F0F2F4; 
+    
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tituloProductOverView {
+    padding: 2px;
+    font-size:small;
+    text-align: center;
+    background: #F0F2F4; 
+    
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+//Encabezado, información usuario
+.encabezado{
+    padding: 8px 15px 8px 15px ;
+    font-size:small;   
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    border: #F0F2F4 2px;    
+    text-align: left;
+}
+
+//Boton Izquierdo de icono con simbolo + 
+.btnMas{
+    background: white;      
+    padding: 2px;
+    width: 6%;
+    text-decoration: none;
+}
+
+
+//Boton Derecho de icono con simbolo Flecha
+.btnDerecha{
+    margin-left: 1px;
+}
+
+//Tamaño del texto
+.texto{
+    font-size: 12px;
+}
+
+//Items sin padding
+.listOverview{
+    padding: 0 !important;
+}
+
+//Valor de cada producto, al lado de la flecha
+.pago{   
+    margin-right: 28px;
+    font-size: 11px;
+    
+}
+
+//Valor de la segunda fila
+.cuenta{    
+    font-size:small;  
+    
+}
+
+//Posicion de la flecha
+.mvtos{    
+    background: rgb(179, 176, 176);
+    width: 40px;
+    height: 40px;
+    color: #ffffff;
+}
+
+//Titulo para cada producto accounts, loan, credit card, investments
+.ttlProductOverView{
+    background: #F0F2F4;
+    
+    color: white;
+    padding: 5px; 
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.btnLogout{
+    font-weight: normal;
+    background: white;
+    margin: 0;
+}
+
+table.inilis {
+    width: 100%;
+}
+
+.inilis, .inilisb {
+    clear: both;
+    margin: 0 0 16px 0;
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing: 0;
+}
+
+.anchoTable {
+    margin: 0 10px 0 10px;
+    text-align: unset;
+    width: 100%;
+}
+
+.inilis td {
+    line-height: 16px;
+   // border-bottom: 1px solid #E0E0E0;
+    padding: 10px 1%;
+}
+
+#puntaje6{
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 750;
+    margin-bottom: 15px;
+}
+
+#userLabel{
+    font-size: 11px;
+    text-transform: uppercase;    
+    margin-bottom: 3px;
+}
+
+#puntaje4{
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+#puntaje3{
+    text-transform: capitalize;
+    font-weight: 750;    
+}
+
+#puntaje2{
+    float: left;
+    font-weight: 650;      
+    font-size: 11px;
+}
+#puntaje2_r{   
+    font-weight: lighter;
+    font-size: 11px;   
+}
+
+#table{
+    width: 100%;
+}
+
+.tab-button-text{
+    color: rgb(248, 246, 246) !important;
+}
+
+.payeelist            {              border-collapse:collapse; border-spacing:0; width:100%;  box-sizing: border-box; background:#f0f0f0; margin:0 0 0 0; border:1px solid; box-shadow:0 -4px 8px rgba(0,0,0,0.05) inset; }
+.payeelist td      {              font-size:11px;   vertical-align:middle; text-align:left; padding:4px 8px; }             
+.payeelist td h3                {                              font-size:12px; font-weight:bold; color:#666666; margin:0; padding:0; }
+.payeelist td label           {              display: inline-block; width:60px; color:#888888; font-weight:normal;  } //padding-left:4px;
+.payeelist td .ksbot        {              width:150px;  display:inline-block;         margin:0 0 0 1px;; } //float: unset;
+.payeelist td .pagarbot {              margin-top:-32px;          }
+.payeelist td .selectAccbot {              margin-top: -10px;          }
+.payeelist td .selectAccbot2 {              margin-top: -10px;          }
+.payeelist td .selectAccbotMin{              margin-top: -10px;          } 
+.payeelist td input[type="text"]              {              font-size:13px; height: 28px !important;padding: 4px 8px; width:200px;                }
+@media (max-width: 890px) 
+{              .payeelist tr td  {              display:block; width:100%; float:left;     }
+               .payeelist td .pagarbot {              margin-top:0;    }
+               .payeelist td .selectAccbot {              margin-top:0;    }
+               .payeelist td .selectAccbot2 {              margin-top:0;    }
+}
+.selectAccbot    {      position:relative; font-size:13px; line-height:15px; width:40px;height: 58px; text-transform:uppercase;  padding:4px 30px 4px 4px; text-align:center; background:#a9a6a6; float:right; color:#ffffff; box-sizing: border-box;     margin-top: 0px; cursor:pointer; }
+.selectAccbot i  {      position:absolute; top:4px; font-size:32px; right:8px;      }
+.selectAccbot:hover     {      background:#FF3C00; 
+     }
+.selectAccbot span{ vertical-align: 130%; margin-left: 14px;}
+
+.selectAccbot2    {      position:relative; font-size:13px; line-height:15px; width:40px;height: 47px; text-transform:uppercase;  padding:4px 30px 4px 4px; text-align:center; background:#a9a6a6; float:right; color:#ffffff; box-sizing: border-box;     margin-top: 0px; cursor:pointer; }
+.selectAccbot2 i  {      position:absolute; top:4px; font-size:32px; right:8px;      }
+.selectAccbot2:hover     {      background:#FF3C00; 
+     color:#ffffff !important;}
+.selectAccbot2 span{ vertical-align: 50%; margin-left: 14px;}
+
+.selectAccbotMin    {      position:relative; font-size:13px; line-height:15px; width:40px;height: 36px; text-transform:uppercase;  padding:4px 30px 4px 4px; text-align:center; background:#a9a6a6; float:right; color:#ffffff; box-sizing: border-box;     margin-top: 0px; cursor:pointer; }
+.selectAccbotMin i  {      position:absolute; top:4px; font-size:32px; right:8px;      }
+.selectAccbotMin:hover     {      background:#FF3C00; 
+     color:#ffffff !important;}
+.selectAccbotMin span{ vertical-align: 20%; margin-left: 14px;}
+
+
+#ios-arrow:hover     {       color:#ffffff !important;}
+
+.pagarbot    {      position:relative; font-size:13px; line-height:15px; width:120px; text-transform:uppercase;  padding:4px 50px 4px 4px; text-align:right; background:#ed9e2d; float:right; color:#ffffff !important; box-sizing: border-box;     margin-top: -10px; cursor:pointer; }
+.pagarbot i  {      position:absolute; top:4px; font-size:32px; right:8px;      }
+.pagarbot:hover     {      background:#FF3C00; 
+     }
+
+table .ttd{ width:90% !important}
+
+#user    {              position:relative; float:right; display:block; top:0; right:0; height:100%; }
+#user dl {              position:relative; right:0px; top:0px; height:96px; width:215px; padding:4px 12px 4px 0; margin:0; display:table-cell;  box-sizing: border-box; z-index:990; vertical-align: middle;  }
+#user dt {              font-size: 11px; font-weight:bold; color:#999; float:left; }
+#user dd {              margin:0 0 2px 66px; font-size: 11px; color:#222; }
+#user.mob dl {         height:unset !important;            }
+
+
+//Botones Nuevos
+#primerBoton   { width: 45%; }
+
+
+
+
+//Se cambia el color solo a la flecha de regreso atras
+.back-button-icon-md {
+    color: #fff;
+}
+
+#logoCancel {
+    width: 60px;
+    //width: 56px;
+    //background: url(../assets/img/cancelar.png) 0 0 no-repeat;
+    height: 30px;
+    left: 10px;
+    top: 20px;
+    position: absolute;
+    color: #ffffff;
+}
+
+#primerBoton { margin-left: 25% }
+
+
+//para agrandar la flecha back
+.ion-md-arrow-back:before {
+    content: "\f27d";
+    margin-left: 10px;
+    font-size: 2.4rem;
+}
+
+//para agrandar la lupa
+.ion-ios-search-outline:before {
+    content: "\f20a";
+    font-size: 2.4rem;
+}
+
+//Evita el paddind en de los input
+.no-padding {
+    padding: 0px !important;
+}
+
+  ////******************************************************
+
+  // Nuevos cambios para la app - 27 de abril de 2020
+
+  // Estilos para la mayoria de pantalla en la app
+    .todo{
+       /* margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;    */
+        font-family: Helvetica;    
+        //color : #737373;
+        background: #F0F2F4;
+    }
+
+    // color de los botones login y afiliate, se puede usar como estandar
+    #contenedorBtn { margin-left: 20px; margin-top: 12px; }
+
+    //Propiedades del boton login y afiliate, se puede usar como estandar
+    .button-inner  { color: #FF3C00; font-weight: bold; font-size: 14px; }
+
+    // Propiedades del alert
+    .alert-md .alert-wrapper {
+        border-radius: 20px;
+        background-color: #F4F2F4;
+    }
+
+    // Propiedades del alert
+    .alert-md .alert-head {
+        text-align: left;
+        text-align: start;
+        padding: 18px 18px 10px;
+        background: #F4F2F4;
+      }
+
+    // Propiedades del alert
+    .alert-md .alert-title {
+        font-size: 22px;
+        color: #323232;
+        font-weight: bold;
+    }
+
+    // Propiedades del alert
+    .alert-md .alert-message {
+        margin-top: -1%;
+        margin-left: -9px
+    }
+
+    // Propiedades del alert
+    .alert [aria-checked="true"] .alert-radio-label {
+
+        color: #FF3C00; 
+    
+    }
+
+    // Propiedades del alert
+    .alert [aria-checked="true"] .alert-radio-icon {
+
+        color: #FF3C00; 
+    
+    }
+
+    // Propiedades del alert
+    .alert-radio-inner{
+        color: #FF3C00; 
+    }
+
+    // color de la letra
+    .colorGris{
+        color: #323232;
+    }  
+
+    //** se crean para para que aparezcan los logos
+    #regresarVP {
+        background: url(../assets/img/new/BANDEJA_DEVOLVERSE.svg) 0 0 no-repeat;
+        width: 35px;
+        height: 45px;
+        background-color: transparent;
+        float: left;
+    }
+    
+    #VP {
+        background: url(../assets/img/new/BANDEJA_VERIFICACION_ID.svg) 0 0 no-repeat;
+        width: 35px;
+        height: 45px;
+        background-color: transparent;
+        float: right;
+    }
+
+    #gridCardTC {
+        background: url(../assets/img/new/BANDEJA_TC.svg) 0 0 no-repeat;
+        width: 35px;
+        height: 45px;
+        background-color: transparent;
+        float: right;
+    }
+
+    
+
+

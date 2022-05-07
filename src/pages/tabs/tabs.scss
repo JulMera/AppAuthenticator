@@ -1,0 +1,39 @@
+page-tabs {
+    
+    .tabbar a[aria-selected=true] {
+        border-bottom: 2px;
+        border-style: solid;
+        border-color: #333333;
+        background-color: #595959; 
+        color: blue; 
+    }
+
+    /*
+    //para poner la imagen en los iconos, primero se pone esto en el html (tabIcon="customicon")
+
+      .ion-ios-customicon-outline,
+        .ion-ios-customicon,.ion-md-customicon,.ion-md-customicon-outline {
+        content: url('../assets/img/Products.svg');
+        }
+
+        .ion-ios-customicon2-outline,
+        .ion-ios-customicon2,.ion-md-customicon2,.ion-md-customicon2-outline {
+        content: url('../assets/img/Transfer.svg');
+        }
+
+        .ion-ios-customicon3-outline,
+        .ion-ios-customicon3,.ion-md-customicon3,.ion-md-customicon3-outline {
+        content: url('../assets/img/Paymens.svg');
+        }
+
+        .ion-ios-customicon4-outline,
+        .ion-ios-customicon4,.ion-md-customicon4,.ion-md-customicon4-outline {
+        content: url('../assets/img/Security.svg');
+        }
+
+        .ion-ios-customicon5-outline,
+        .ion-ios-customicon5,.ion-md-customicon5,.ion-md-customicon5-outline {
+        content: url('../assets/img/Search.svg');
+        }
+    */
+}

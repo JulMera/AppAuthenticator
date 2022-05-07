@@ -1,0 +1,64 @@
+page-push {
+
+    table, th, td {
+        border-collapse: collapse;
+      }
+
+      //Barra de menu - color blanco
+    .ion-md-menu:before { 
+      content: "\f32a";
+      color: white;
+  }
+
+  ///*********************
+
+  // Lo nuevo que sugirio sebastian
+
+  // estilo icono regresar
+  .devolver{
+    margin-left: 5px;
+}
+
+// estilo icono otp
+.otp{
+  float: right;
+  margin-right: 5px;
+}
+
+.texto {
+
+  font-size: 20px;
+  text-align: left;
+  color: #323232;
+  font-family: Helvetica;
+  font-weight: bold;    
+  margin-top: 10px;
+}
+
+table{
+  width: 100%;
+}
+
+// color y estilo botones
+.button-outline {
+
+  border-color: #FFF;
+  color: #FFF;
+}
+
+// estilo del ion-card
+.card {
+  border-radius: 25px;   
+  padding: 3px;  
+  width: calc(97% - 20px);
+  margin-left: auto;
+}
+
+// estilo del ion-card
+.card-content {
+  background: #F0F2F4;
+  height: 430px;
+}
+
+
+}
